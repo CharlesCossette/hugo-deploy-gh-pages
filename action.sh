@@ -40,9 +40,6 @@ URL=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${E
 echo "Using '${URL}' to download Hugo"
 curl -sSL "${URL}" > /tmp/hugo.deb && dpkg --force architecture -i /tmp/hugo.deb
 
-echo "Installing Go"
-snap install --classic go
-
 echo "Building the Hugo site with: 'hugo ${HUGO_ARGS}'"
 hugo "${HUGO_ARGS}"
 
